@@ -1,0 +1,77 @@
+/* Global page reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  color: #222;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Centered card container */
+.container {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: 360px;
+  text-align: center;
+}
+
+.logo {
+  width: 140px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+/* Header */
+h2 {
+  margin-bottom: 12px;
+}
+
+p {
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+/* Input fields */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 16px 0;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  background: #0070f3;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #0059c9;
+}
+
+/* Logout Button (smaller) */
+.logout-btn {
+  background: #ff4747;
+}
+.logout-btn:hover {
+  background: #d93c3c;
+}

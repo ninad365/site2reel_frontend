@@ -6,32 +6,29 @@ export default function Signup() {
   const [password, setPassword] = useState("");
 
   async function signUp() {
-    const { error } = await supabase.auth.signUp({
-      email,
-      password,
-    });
+    const { error } = await supabase.auth.signUp({ email, password });
 
     if (error) alert(error.message);
     else alert("Check your email for verification!");
   }
 
   return (
-    <div style={{ padding: 20 }}>
+    <div className="container">
+      <img src="/logo.png" className="logo" alt="Site2Reel Logo" />
+
       <h2>Create Account</h2>
 
-      <input
-        type="email"
-        placeholder="Email"
-        onChange={(e) => setEmail(e.target.value)}
-      /><br />
+      <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+      <br />
 
-      <input
-        type="password"
-        placeholder="Password"
-        onChange={(e) => setPassword(e.target.value)}
-      /><br />
+      <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+      <br />
 
       <button onClick={signUp}>Sign Up</button>
+
+      <p>
+        Already have an account? <a href="/login">Login</a>
+      </p>
     </div>
   );
 }

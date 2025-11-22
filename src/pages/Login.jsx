@@ -19,23 +19,18 @@ export default function Login() {
   }
 
   return (
-    <div style={{ padding: 20 }}>
+    <div className="container">
+      <img src="/logo.png" className="logo" alt="Site2Reel Logo" />
       <h2>Login</h2>
-      <input
-        type="email"
-        placeholder="Email"
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <br />
+      <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
 
-      <input
-        type="password"
-        placeholder="Password"
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <br />
+      <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
 
       <button onClick={signIn}>Login</button>
+
+      <p>
+        No account? <a href="/signup">Sign up</a>
+      </p>
     </div>
   );
 }

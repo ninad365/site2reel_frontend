@@ -5,6 +5,7 @@ export default function Home() {
   const [session, setSession] = useState(null);
   const [backendStatus, setBackendStatus] = useState("");
 
+  // Protect route
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
       if (!data.session) {
@@ -39,7 +40,7 @@ export default function Home() {
   if (!session) return null;
 
   return (
-    <div style={{ padding: 20 }}>
+    <div className="container">
       <h2>Site2Reel Tool</h2>
       <p>Welcome {session.user.email}</p>
 
